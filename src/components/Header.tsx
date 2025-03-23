@@ -17,6 +17,7 @@ const navItems = [
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
+    const closeMenu = () => setIsOpen(false);
 
     return (
         <header className="sticky top-0 z-50 bg-white shadow-md font-sans">
@@ -54,6 +55,7 @@ const Header = () => {
                             <Link
                                 key={ item.href }
                                 href={ item.href }
+                                onClick={ closeMenu }
                                 className={`relative text-gray-700 font-bold text-lg transition-all duration-200 ease-in-out hover:text-blue-800 ${
                                     pathname === item.href ? "after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-1 after:bg-blue-800" : ""
                                 }`}
