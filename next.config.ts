@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const cspHeader = `
     default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://*.googletagmanager.com;
     style-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com;
     img-src 'self' blob: data: https://*.google-analytics.com https://*.googletagmanager.com;
     font-src 'self' 'unsafe-eval' https://fonts.gstatic.com;
