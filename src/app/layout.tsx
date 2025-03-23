@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "CID IT Consultancy - IT Solutions",
-    description: "Providing top-tier IT consulting services.",
-    keywords: ["IT consulting", "software development", "CID IT Consultancy"],
+    title: "CID IT CONSULTANCY - IT SOLUTIONS",
+    description: "Where Innovation Meets Impact",
+    keywords: ["IT consulting", "software development", "CID IT Consultancy", "tech", "software auditing"],
     authors: [{ name: "CID IT Consultancy", url: "https://ciditconsultancy.com" }],
     openGraph: {
         title: "CID IT Consultancy - IT Solutions",
-        description: "Your trusted partner for IT solutions.",
+        description: "Where Innovation Meets Impact.",
         url: "https://ciditconsultancy.com",
         images: [
             { url: "https://ciditconsultancy.com/og-image.jpg" },
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        site: "@CID_IT_Consultancy",
+        site: "@ciditconsultancy",
         title: "CID IT Consultancy - IT Solutions",
-        description: "Providing top-tier IT consulting services.",
+        description: "Where Innovation Meets Impact.",
         images: ["https://ciditconsultancy.com/twitter-image.jpg"],
     },
 };
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children }: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="en">
-        <body className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
+        <body className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-roboto">
         <Header />
         {children}
         <Footer />

@@ -6,11 +6,9 @@ export default function Home() {
         <div className="space-y-16">
             {/* Hero Section */}
             <Hero
-                title={"CID IT Consultancy"}
-                subtitle={"Where Innovation Meets Impact."}
-                ctaText={"Contact Us"}
-                ctaLink={"/contact"}
-                imageUrl={"/hero-img.jpg"} />
+                title={"CID IT CONSULTANCY"}
+                subtitle={"Where Innovation Meets Impact"}
+                imageUrl={"/consultancy.jpg"} />
 
             {/* About Us */}
             <section className="py-20 bg-white">

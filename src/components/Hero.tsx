@@ -22,12 +22,12 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, imageUrl, ctaText, ctaLink
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
             {/* Content */}
             <div className="relative z-10 p-8">
-                <h1 className="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">{title}</h1>
-                {subtitle && <p className="text-xl md:text-2xl mb-4 drop-shadow-md">{subtitle}</p>}
+                <h1 className="text-6xl tracking-widest md:text-7xl font-extrabold mb-4 drop-shadow-lg">{title}</h1>
+                {subtitle && <p className="text-2xl tracking-wide md:text-4xl mb-4 drop-shadow-md">{subtitle}</p>}
                 {ctaText && ctaLink && (
                     <a
                         href={ctaLink}

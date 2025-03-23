@@ -20,7 +20,7 @@ const Header = () => {
     const closeMenu = () => setIsOpen(false);
 
     return (
-        <header className="sticky top-0 z-50 bg-white shadow-md font-sans">
+        <header className="sticky top-0 z-50 bg-white shadow-md">
             <div className="container mx-auto px-4 py-5 flex justify-center items-center">
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex space-x-14">
@@ -29,8 +29,8 @@ const Header = () => {
                         <Link
                             key={ item.href }
                             href={ item.href }
-                            className={`relative text-gray-900 font-bold transition-all duration-200 ease-in-out hover:text-blue-800 ${
-                                pathname === item.href ? "after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-1 after:bg-blue-800" : ""
+                            className={`relative text-gray-900 font-normal transition-all duration-200 ease-in-out hover:text-blue-800 ${
+                                pathname === item.href ? "font-bold after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-1 after:bg-blue-800" : ""
                             }`}
                         >
                             { item.name }
