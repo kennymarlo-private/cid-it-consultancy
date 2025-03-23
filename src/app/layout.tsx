@@ -46,7 +46,7 @@ export default  function RootLayout({children }: Readonly<{ children: React.Reac
         <body  className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-roboto">
         <Header />
         {children}
-        <GoogleAnalytics gaId="G-NSXT3LJP52" />
+        <GoogleAnalytics gaId="G-KB4RRDK878" />
         <Footer />
         </body>
         </html>
