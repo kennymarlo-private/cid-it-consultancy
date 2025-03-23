@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import CTA from '@/components/CTA';
 
 export default function Home() {
     return (
@@ -7,7 +8,17 @@ export default function Home() {
             <Hero
                 title={"CID IT CONSULTANCY"}
                 subtitle={"Where Innovation Meets Impact"}
+                ctaText={"Contact Us"}
+                ctaLink={"/contact"}
                 imageUrl={"/consultancy.jpg"} />
+
+            <CTA
+                title="Transform your business today"
+                description="Join thousands of companies that have already taken their business to the next level with our platform."
+                buttonText="Start Free Trial"
+                buttonLink="/trial"
+                variant="default"
+            />
 
             {/* About Us */}
             <section className="py-20 bg-white">
