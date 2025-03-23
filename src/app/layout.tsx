@@ -43,7 +43,7 @@ export default function RootLayout({children }: Readonly<{ children: React.React
         <body className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-roboto">
         <Header />
         {children}
-        <GoogleAnalytics gaId={"G-DYGTL8VWVD"} />
+        <GoogleAnalytics gaId={"G-DYGTL8VWVD"} dataLayerName={"CID IT CONSULTANCY"} />
         <Footer />
         </body>
         </html>

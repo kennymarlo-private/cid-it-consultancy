@@ -1,5 +1,6 @@
 "use client";
 
+import { sendGAEvent } from '@next/third-parties/google';
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -29,6 +30,7 @@ const Header = () => {
                         <Link
                             key={ item.href }
                             href={ item.href }
+                            onClick={() => sendGAEvent('event', 'buttonClicked', { value: item.name }) }
                             className={`relative text-gray-900 font-normal transition-all duration-200 ease-in-out hover:text-blue-800 ${
                                 pathname === item.href ? "font-bold after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-1 after:bg-blue-800" : ""
                             }`}
@@ -55,7 +57,7 @@ const Header = () => {
                             <Link
                                 key={ item.href }
                                 href={ item.href }
-                                onClick={ closeMenu }
+                                onClick={ () => { closeMenu(); sendGAEvent('event', 'buttonClicked', { value: item.name }) } }
                                 className={`relative text-gray-700 font-bold text-lg transition-all duration-200 ease-in-out hover:text-blue-800 ${
                                     pathname === item.href ? "after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-1 after:bg-blue-800" : ""
                                 }`}
