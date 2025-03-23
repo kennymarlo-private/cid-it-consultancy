@@ -39,14 +39,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({children }: Readonly<{ children: React.ReactNode; }>) {
-    const nonce = randomUUID();
     return (
         <html lang="en">
         <body className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-roboto">
         <Header />
         {children}
-        <GoogleTagManager gtmId={"GTM-PD8R59QT"} nonce={nonce} />
-        <GoogleAnalytics gaId={"G-DYGTL8VWVD"} dataLayerName={"CID IT CONSULTANCY"} nonce={nonce} />
+        <GoogleTagManager gtmId={"GTM-PD8R59QT"} />
+        <GoogleAnalytics gaId={"G-DYGTL8VWVD"} dataLayerName={"CID IT CONSULTANCY"} />
         <Footer />
         </body>
         </html>
