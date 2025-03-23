@@ -1,10 +1,10 @@
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
-import { randomUUID } from "crypto";
 import type {Metadata} from "next";
 import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import React from "react";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -45,7 +45,7 @@ export default function RootLayout({children }: Readonly<{ children: React.React
         <Header />
         {children}
         <GoogleTagManager gtmId={"GTM-PD8R59QT"} />
-        <GoogleAnalytics gaId={"G-DYGTL8VWVD"} dataLayerName={"CID IT CONSULTANCY"} />
+        <GoogleAnalytics gaId={"G-DYGTL8VWVD"} />
         <Footer />
         </body>
         </html>
