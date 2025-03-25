@@ -1,11 +1,11 @@
 import type { NextConfig } from "next";
 
 const cspHeader = `
-    default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com;
+    default-src 'self' *.googletagmanager.com *.gstatic.com *.google-analytics.com;
+    script-src 'self' 'unsafe-eval' 'unsafe-inline';
     style-src 'self' 'unsafe-inline' 'unsafe-eval' fonts.googleapis.com;
     img-src 'self' blob: data:;
-    font-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.gstatic.com;
+    font-src 'self' 'unsafe-inline' 'unsafe-eval' *.gstatic.com;
     object-src 'none';
     base-uri 'self';
     connect-src 'self';
