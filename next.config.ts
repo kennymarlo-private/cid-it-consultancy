@@ -4,7 +4,7 @@ const cspHeader = `
     default-src 'self' *.googletagmanager.com *.gstatic.com *.google-analytics.com;
     script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.gstatic.com *.google-analytics.com;;
     style-src 'self' 'unsafe-inline' 'unsafe-eval' fonts.googleapis.com;
-    img-src 'self' blob: data:;
+    img-src 'self' blob: data: *.googletagmanager.com *.gstatic.com *.google-analytics.com;
     font-src 'self' 'unsafe-inline' 'unsafe-eval' *.gstatic.com;
     object-src 'none';
     base-uri 'self';
