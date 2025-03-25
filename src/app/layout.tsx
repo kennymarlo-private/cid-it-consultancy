@@ -39,7 +39,7 @@ export default  function RootLayout({children }: Readonly<{ children: React.Reac
         <Analytics />
         <Footer />
         </body>
-        <GoogleAnalytics gaId="G-KB4RRDK878" />
+        <GoogleAnalytics gaId={"G-KB4RRDK878"} />
         </html>
     );
 }
