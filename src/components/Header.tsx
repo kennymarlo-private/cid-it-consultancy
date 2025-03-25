@@ -30,7 +30,11 @@ const Header = () => {
                         <Link
                             key={ item.href }
                             href={ item.href }
-                            onClick={() => sendGAEvent('event', 'buttonClicked', { value: item.name }) }
+                            onClick={() => sendGAEvent('event', 'button_clicked', {
+                                event_category: 'Navigation',
+                                event_label: item.name,
+                                value: item.name
+                            })}
                             className={`relative text-gray-900 font-normal transition-all duration-200 ease-in-out hover:text-blue-800 ${
                                 pathname === item.href ? "font-bold after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-1 after:bg-blue-800" : ""
                             }`}
@@ -57,7 +61,11 @@ const Header = () => {
                             <Link
                                 key={ item.href }
                                 href={ item.href }
-                                onClick={ () => { closeMenu(); sendGAEvent('event', 'buttonClicked', { value: item.name }) } }
+                                onClick={() => sendGAEvent('event', 'button_clicked', {
+                                    event_category: 'Navigation',
+                                    event_label: item.name,
+                                    value: item.name
+                                })}
                                 className={`relative text-gray-700 font-bold text-lg transition-all duration-200 ease-in-out hover:text-blue-800 ${
                                     pathname === item.href ? "after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-1 after:bg-blue-800" : ""
                                 }`}
