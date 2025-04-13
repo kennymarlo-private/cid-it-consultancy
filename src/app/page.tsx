@@ -34,34 +34,6 @@ export default function Home() {
                 <AboutPreview />
             </section>
 
-            {/*/!* About Us *!/*/}
-            {/*<section className="py-20 bg-white">*/}
-            {/*    <h2 className="text-3xl font-semibold text-center">About Us</h2>*/}
-            {/*</section>*/}
-
-            {/* Services */}
-
-
-            {/* Why Choose Us */}
-            <section className="py-20 bg-white">
-                <h2 className="text-3xl font-semibold text-center">Why Choose Us</h2>
-            </section>
-
-            {/* Testimonials */}
-            <section className="py-20 bg-gray-100">
-                <h2 className="text-3xl font-semibold text-center">Testimonials</h2>
-            </section>
-
-            {/* Call-to-Action */}
-            <section className="py-20 bg-blue-600 text-white text-center">
-                <h2 className="text-3xl font-semibold">Call-to-Action</h2>
-            </section>
-
-            {/* Blog Section (Optional) */}
-            <section className="py-20 bg-white">
-                <h2 className="text-3xl font-semibold text-center">Latest Blog Posts</h2>
-            </section>
-
         </div>
     );
 }
