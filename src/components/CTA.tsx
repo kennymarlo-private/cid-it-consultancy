@@ -6,6 +6,7 @@ interface CTAProps {
     description: string
     buttonText: string
     buttonLink: string
+    buttonSubtext?: string
     variant?: "default" | "outline" | "secondary" | "ghost" | "link" | "destructive"
 }
 
@@ -14,6 +15,7 @@ export default function CTA({
                                 description = "Join thousands of satisfied customers using our platform today.",
                                 buttonText = "Get Started",
                                 buttonLink = "/signup",
+                                buttonSubtext,
                                 variant = "default",
                             }: CTAProps) {
     return (
@@ -28,6 +30,9 @@ export default function CTA({
                         <Button asChild size="lg" className="w-full" variant={variant}>
                             <Link href={buttonLink}>{buttonText}</Link>
                         </Button>
+                        {buttonSubtext && (
+                            <p className="text-sm text-muted-foreground text-center">{buttonSubtext}</p>
+                        )}
                     </div>
                 </div>
             </div>
