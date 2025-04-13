@@ -5,28 +5,28 @@ const services = [
         id: 1,
         title: "Consulting",
         description: "We offer consultancy services to clients, our expertise is in software development, Magnolia CMS, and cybersecurity.",
-        image: "/images/consulting.png", // Replace with an actual image path
+        image: "/consulting-img.jpg", // Replace with an actual image path
         link: "/services/consulting",
     },
     {
         id: 2,
         title: "System Integration",
         description: "We specialize in integrating disparate systems, enabling seamless data flow and automation across your business processes for greater efficiency and reliability.",
-        image: "/images/system-integration.png", // Replace with an actual image path
+        image: "/system-integration-img.jpg", // Replace with an actual image path
         link: "/services/system-integration",
     },
     {
         id: 3,
         title: "Software Development",
         description: "Our software solutions are tailored to meet your unique business needs, ensuring long-term efficiency and success.",
-        image: "/images/software-development.png",
+        image: "/software-development-img.jpg",
         link: "/services/software-development",
     },
     {
         id: 4,
         title: "Cybersecurity Solutions",
         description: "Protect your business with our cybersecurity solutions designed to safeguard your digital assets and minimize risks.",
-        image: "/images/cybersecurity.png",
+        image: "/cybersecurity-img.jpg",
         link: "/services/cybersecurity",
     },
     // You can add more service items here.

@@ -32,20 +32,11 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, imageUrl, ctaText, ctaLink
                 <h1 className="text-6xl tracking-widest md:text-7xl font-extrabold mb-4 drop-shadow-lg">{title}</h1>
                 {subtitle && <p className="text-2xl tracking-wide md:text-4xl mb-4 drop-shadow-md">{subtitle}</p>}
 
-                        <Button asChild size="lg" className="opacity-80" variant={variant}>
-                            {ctaText && ctaLink && (
-                                <Link href={ctaLink}>{ctaText}</Link>
-                            )}
-                        </Button>
-
-                {/*{ctaText && ctaLink && (*/}
-                {/*    <a*/}
-                {/*        href={ctaLink}*/}
-                {/*        className="bg-blue-600 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition duration-200 inline-flex mt-8"*/}
-                {/*    >*/}
-                {/*        {ctaText}*/}
-                {/*    </a>*/}
-                {/*)}*/}
+                <Button asChild size="lg" className="opacity-80" variant={variant}>
+                    {ctaText && ctaLink && (
+                        <Link href={ctaLink}>{ctaText}</Link>
+                    )}
+                </Button>
             </div>
         </div>
     );
