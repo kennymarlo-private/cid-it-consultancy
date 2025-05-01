@@ -1,8 +1,8 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
 import type {Metadata} from "next";
-import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
+import { ReCaptchaProvider } from "next-recaptcha-v3";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import React from "react";
@@ -32,14 +32,18 @@ export const metadata: Metadata = {
 export default  function RootLayout({children }: Readonly<{ children: React.ReactNode; }>) {
 
     return (
-        <html lang="en">
-        <body  className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-roboto">
-        <Header />
-        {children}
-        <Analytics />
-        <Footer />
-        </body>
-        <GoogleAnalytics gaId={"G-KB4RRDK878"} />
-        </html>
+
+            <html lang="en">
+            <body  className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-roboto">
+            <Header />
+            <ReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
+            {children}
+            </ReCaptchaProvider>
+            <Analytics />
+            <Footer />
+            </body>
+            <GoogleAnalytics gaId={"G-KB4RRDK878"} />
+            </html>
+
     );
 }

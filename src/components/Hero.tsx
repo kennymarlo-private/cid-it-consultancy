@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 interface HeroProps {
-    title: string;
+    title?: string;
     subtitle?: string;
     imageUrl: string;
     ctaText?: string;
@@ -29,9 +29,11 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, imageUrl, ctaText, ctaLink
 
             {/* Content */}
             <div className="relative z-10 p-4 max-w-3xl flex flex-col items-center">
+                {title && (
                 <h1 className="text-4xl sm:text-5xl md:text-6xl tracking-tight font-extrabold mb-4 drop-shadow-lg">
                     {title}
                 </h1>
+                )}
                 {subtitle && (
                     <p className="text-lg sm:text-xl md:text-2xl mb-6 drop-shadow-md">
                         {subtitle}

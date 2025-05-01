@@ -8,7 +8,7 @@ const cspHeader = `
     font-src 'self' 'unsafe-inline' 'unsafe-eval' *.gstatic.com;
     object-src 'none';
     base-uri 'self';
-    connect-src 'self' *.googletagmanager.com *.gstatic.com *.google-analytics.com;
+    connect-src 'self' script.google.com *.googletagmanager.com *.gstatic.com *.google-analytics.com;
     form-action 'self';
     frame-ancestors 'none';
     upgrade-insecure-requests;
