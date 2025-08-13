@@ -1,11 +1,19 @@
+"use client";
+
 import Hero from '@/components/Hero';
 import CTA from '@/components/CTA';
 import AboutPreview from "@/components/AboutPreview";
 import Services from "@/components/Services";
+import ConsentModal from "@/components/ConsentModal";
+import ConsentBanner from "@/components/ConsentBanner";
+import { useConsent } from "@/hooks/useConsent";
 import React from "react";
 
 export default function Home() {
+    const { isModalOpen, saveConsent, closeConsentModal } = useConsent();
+
     return (
+        <>
             <div className="space-y-0">
                 {/* Hero Section */}
                 <Hero
@@ -18,7 +26,7 @@ export default function Home() {
                 <section className="bg-white">
                     <CTA
                         title="Ready to Work Smarter? Let's Create What's Next."
-                        description="CID IT Consultancy blends creativity and technology to deliver custom solutions that don’t just work — they lead. Whether you're modernizing systems or building from scratch, we're here to make innovation tangible."
+                        description="CID IT Consultancy blends creativity and technology to deliver custom solutions that don't just work — they lead. Whether you're modernizing systems or building from scratch, we're here to make innovation tangible."
                         buttonText="Talk to Our Team"
                         buttonLink="/contact"
                         buttonSubtext="Response within 24 hours — no commitment required"
@@ -35,5 +43,15 @@ export default function Home() {
                 </section>
             </div>
 
+            {/* Consent Modal */}
+            <ConsentModal
+                isOpen={isModalOpen}
+                onAccept={saveConsent}
+                onDecline={closeConsentModal}
+            />
+
+            {/* Consent Banner */}
+            <ConsentBanner />
+        </>
     );
 }
